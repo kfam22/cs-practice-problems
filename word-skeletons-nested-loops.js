@@ -36,6 +36,3 @@ const findSkels = (word, skeletons) => skeletons
 console.log(findSkels(word, skeletons));
 
 console.log(findSkels(word, skeletons))
-
-
-
