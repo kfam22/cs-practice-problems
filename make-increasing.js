@@ -37,7 +37,8 @@
 // Return true if it is possible to obtain a strictly increasing array by applying the digit-swap operation at most once, and false otherwise.
 
 // test case
-let numbers = [1, 7, 900, 10]
+let numbers = [1, 7, 900, 8, 10, 20]
+// expect answer = [1, 02, 7, 8, 009, 10 ]
 
 function solution(numbers) {
     let sorted = [...numbers].sort(function(a,b){
@@ -45,9 +46,10 @@ function solution(numbers) {
     })
     if(arraysEqual(numbers, sorted)) return true;
     for(let i = 0; i < numbers.length; i++){
-        console.log(String(numbers[i]))
+        console.log(String(numbers[i]).includes(0))
+        
     }
-  
+  return numbers
 }
 
 function arraysEqual(a, b) {
@@ -57,7 +59,7 @@ function arraysEqual(a, b) {
         a.every((val, index) => val === b[index]);
 }
 
-solution
+console.log("solution", solution(numbers))
 
 // function reorder(str) {
 //     if(!str.includes('0'))
