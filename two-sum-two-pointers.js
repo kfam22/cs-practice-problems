@@ -37,3 +37,18 @@ let twoSumTwoPointers = (array, target) => {
     // This code will be reached only when our base condition is satisfied
     return [i, j]
   }
+
+//   hash table method 
+const nums = [1, 2, 3, 4, 5];
+// const target = 9;
+
+var twoSum = function(nums, target) {
+    let indices = {}
+    for(currentIndex in nums){
+        let compliment = target - nums[currentIndex]
+        if(indices[compliment]){
+            return [indices[compliment],  currentIndex]
+        }
+        indices[nums[currentIndex]] = currentIndex
+    }
+};
