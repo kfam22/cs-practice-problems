@@ -53,6 +53,17 @@ function solution(numbers){
         }
         return(sorted)
         }
+
+        // the following checks if sorted array is in strictly ascending order
+
+        // let ascending = true
+        
+        // for(let i = sorted.length - 1; i > 0; i--){
+        //     if(sorted[i - 1] >= sorted[i]) ascending = false
+            
+        // }
+        
+        // return ascending;
     
 
 solution([0, 4, 3, 2, 1])
