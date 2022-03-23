@@ -42,7 +42,7 @@ let twoSumTwoPointers = (array, target) => {
 const nums = [1, 2, 3, 4, 5];
 // const target = 9;
 
-var twoSum = function(nums, target) {
+function twoSumHash(nums, target) {
     let indices = {}
     for(currentIndex in nums){
         let compliment = target - nums[currentIndex]
