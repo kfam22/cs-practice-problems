@@ -11,27 +11,24 @@
 // The input is an integer, but the result should be a string padding with leading zeros to 6 places.
 
 function solution(current) {
-    if(current === 999999) return '000000'
-    
-    // let numArr = (current + '').split('')
+    if (current === 999999) return '000000';
     current++;
-    while(!isPalindrome(current)) {
+    while(!isAPalindrome(current)){
         current++;
+        
     }
-    return makeStringValue(current)
-    
-    
-    
-    
-    // for(let i = 0; i < )
+    return makeStringValue(current);
 }
 
-function makeStringValue(val) {
-    const valToString = String(val)
-    const diff = 6 - valToString;
-    const zeros = Array(diff).
+function makeStringValue(value){ 37
+    const valueToString = String(value);
+    const diff = 6 - valueToString.length;
+    const zeros = Array(diff).fill('0').join('');
+    return zeros + valueToString;
 }
 
-function reverse(num) {
-    return Number((num + '').split('').reverse().join(''))
+function isAPalindrome(value){
+    const valueToCorrectFormat = makeStringValue(value);
+    return valueToCorrectFormat === valueToCorrectFormat.split('').reverse().join('');
 }
+
