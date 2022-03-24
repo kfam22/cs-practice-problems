@@ -1,7 +1,16 @@
 // Description
 // Create a 2D array of size row_count x col_count. Fill the array with 0.
 
+//one way
 function solution(row_count, col_count) {
+    let col = Array(col_count).fill(0);
+    let twoD = Array(row_count).fill(col);
+    
+    return twoD;
+}
+
+// another way
+function solution2(row_count, col_count) {
     let col = []
     let twoD = []
     

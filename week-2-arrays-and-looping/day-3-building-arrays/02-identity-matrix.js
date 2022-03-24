@@ -4,19 +4,17 @@
 // This is called an identity matrix.
 
 function solution(size) {
-    let row = [];
-    let twoD = [];
-    
-    while(row.length < size){
-        row.push(0);
-    }
+    let row = Array(size).fill(0)
+    let matrix = [];
+  
+    // array.splice(indexToChange, numberOfElementsToRemove, Replacement)
     
     for(let i = 0; i < size; i++){
-        let currentRow = [...row];
+        let currentRow = [...row]
         currentRow.splice(i, 1, 1);
-        twoD.push(currentRow);
+        matrix.push(currentRow)
     }
-    return twoD;
+    return matrix;
 }
 
 
