@@ -5,6 +5,7 @@ function solution(picture) {
 
     var answer = [''];
   
+    // the code originally did not include the +2  in the first for loop
     for (var i = 0; i < picture[0].length +2; i++) {
       answer[0] += '*';
     }
