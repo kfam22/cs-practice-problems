@@ -17,3 +17,14 @@
 // Note the the tests will show the linked lists as if they are arrays. This is just the visual representation; under the hood, it's a linked list with those values.
 
 // Return a reference to the head of the list.
+
+
+function solution(a, n) {
+    head = a
+    const newNode = new ListNode(n);
+    while(a.next){
+        a = a.next;
+    }
+    a.next = newNode;
+    return head;
+}
