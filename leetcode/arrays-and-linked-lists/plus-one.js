@@ -17,7 +17,7 @@ var plusOne = function(digits) {
 };
 
 
-// the dumb way
+// the dumb way -- this doesn't work with large numbers
 // var plusOne = function(digits) {
 //     strNum = Number(digits.join(''));
 //     strNum++;
