@@ -52,3 +52,16 @@ function twoSumHash(nums, target) {
         indices[nums[currentIndex]] = currentIndex
     }
 };
+
+
+var twoSumForLoopHash = function(nums, target) {
+    let map = {};
+    
+    for(let num = 0; num < nums.length; num++){
+        let compliment = target - nums[num];
+        if(map[compliment] !== undefined){
+            return [map[compliment], num]
+        }
+        map[nums[num]] = num
+    }
+};
