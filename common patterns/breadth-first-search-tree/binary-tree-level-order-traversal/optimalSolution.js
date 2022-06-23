@@ -9,6 +9,9 @@
 // After removing each node from the queue, insert both of its children into the queue.
 // If the queue is not empty, repeat from step 3 for the next level.
 
+// time complexity: O(n)
+// space complexity: O(n)
+
 var levelOrder = function(root) {
     if(!root) return [];
 
