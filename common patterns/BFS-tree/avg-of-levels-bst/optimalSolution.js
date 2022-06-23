@@ -16,7 +16,7 @@ var averageOfLevels = function(root) {
             if(node.left) queue.push(node.left);
             if(node.right) queue.push(node.right);
         }
-        result.push(level / len)
+        result.push(level / len);
     }
-    return result
+    return result;
 };
