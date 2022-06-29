@@ -30,3 +30,24 @@ function max_sub_array_of_size_k(k, arr) {
 
 // time complexity: O(n)
 // space complexity: O(1)
+
+// take two practice:
+
+function maxSubArrSum(nums, target) {
+  let start = 0,
+      sum = 0,
+      maxSum = 0;
+
+      for(let end = 0; end < nums.length; end++) {
+        sum += nums[end];
+
+        if(end >= target - 1) {
+          maxSum = Math.max(maxSum, sum);
+          sum -= nums[start];
+          start++;
+        }
+      }
+      return maxSum;
+}
+
+console.log(maxSubArrSum([2, 3, 4, 1, 5], 2))
